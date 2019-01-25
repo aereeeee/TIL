@@ -35,6 +35,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+aws/amathon-serverless-spa-master/
 
 # TypeScript v1 declaration files
 typings/
