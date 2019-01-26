@@ -33,3 +33,4 @@ var mostCommonWord = function(paragraph, banned) {
 
 ---
 ## better idea
+,를 공백으로 바꿈 -> "  "공백 두개 문자생김 - banned 단어와 같이 걸러주기
