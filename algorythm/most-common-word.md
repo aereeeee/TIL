@@ -29,7 +29,6 @@ var mostCommonWord = function(paragraph, banned) {
 };
 ``` 
 * `for(let p in obj) sol[sol.length]= p;` 배열에 추가할때 빈 배열의 length를 이용..
-* 테스트 케이스 이상함. 
 
 ---
 ## better idea
