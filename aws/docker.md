@@ -108,8 +108,8 @@ ssh -i ~/.ssh/docker-practice.pem ubuntu@ec2-.ap-northeast-2.compute.amazonaws.c
 #### 권한 바꾸기
 cd ~/.ssh
 .ssh chmod 400 dd.pem
--rw-r--r--@   1 joaeree  staff   1.7K  2  2 17:34 docker-practice.pem
--r--------@   1 joaeree  staff   1.7K  2  2 17:34 docker-practice.pem
+-rw-r--r--@   1 j  staff   1.7K  2  2 17:34 dd.pem
+-r--------@   1 j  staff   1.7K  2  2 17:34 dd.pem
 
 #### 아마존 서버에 장고 설치 런서버
 ```
