@@ -13,7 +13,7 @@ function run(generator){
     - symbol.iterator 들어있음
     - iterator.next()를 만들지 않고 generator.next()로 순회 가능; 즉 동시에 자기자신의 이터레이터 프로토콜 만족
 - 제너레이터 객체는 한번 순회 (for of)하면 다시 순회할 수 없음! 다른 이터레이터 객체는 그렇지 않음
-- 제너레이터 함수 내부 스코프에서만 yield 가능 ;젠 함수 내부의 일반함수에서는 쓸 수 없음
+- 제너레이터 함수 내부 스코프에서만 yield 가능 함수 내부의 일반함수에서는 쓸 수 없음
 - yield* : gen()이 yield 3개 가지고 있는 제너레이터 함수라고 할때 또 다른 제너레이터 함수 안에 `yield* gen()` 넣으면 이거까지 순서대로 구현가능
 
 # Generator
