@@ -1,4 +1,4 @@
-# Merge Two Sorted Lists
+# First Missing Positive
 [문제](https://leetcode.com/problems/first-missing-positive/)
 
 * indexOf를 이용하여 flag를 하나씩 더해가며 배열에 존재하는지 확인
