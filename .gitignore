@@ -36,6 +36,7 @@ build/Release
 node_modules/
 jspm_packages/
 aws/amathon-serverless-spa-master/
+todo.md
 
 # TypeScript v1 declaration files
 typings/
