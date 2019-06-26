@@ -77,21 +77,24 @@ function baseconverter = ({num,n}) => {
         num=Math.floor(num/n);
     }
     while(!modStack.isEmpty()){
-        baseString += modStack.pop().toString();
+        baseString += digits[modStack.pop()];
     }
     return baseString;
 }
 ```
+- n=16이라면 숫자=>문자바꾸는 로직 필요 : 
 
 ---
 ### Q
 1. 클래스는 const let 무엇으로 선언..?
     - es6에서 class문법 추가됨 
-```javascript
-class Foo {}
-
-const foo = new Foo();
-```
-- 위 코드에서 new 연산자와 함께 호출한 Foo는 클래스의 이름이 아니라 constructor(생성자)이다. 표현식이 아닌 선언식으로 정의한 클래스의 이름은 constructor와 동일하다.
+   ```javascript
+   class Foo {}
+   const foo = new Foo();
+   ```
+   - 위 코드에서 new 연산자와 함께 호출한 Foo는 클래스의 이름이 아니라 constructor(생성자)이다. 표현식이 아닌 선언식으로 정의한 클래스의 이름은 constructor와 동일하다.
+   - 변수로 선언 굳이 하지 않는다. 하면 `const`
   
-2. array const선언 시 원소 다루는 것 자유?까먹음
+2. array const선언 시 원소 다루는 것 자유?
+   - array의 참조값만 바뀌지 않으면 array안에 원소 추가 삭제하는 것은 자유로윰
+   
