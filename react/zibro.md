@@ -195,3 +195,39 @@ import {useSelector, useDispatch} from 'react-redux'
 //useDispatch dispatch자체
 
 ```
+
+# 동질성  : Immer쓰는 이유 - 리액트가 shallow 비교하기 떄문에 
+* 자료보고 공부하기
+- strict / shallow / deep equal  
+- shallow 한단계만 내려가서 primative로 보고 비교 
+- deep equal 은 객체안의 객체나 모든 중첩값을 primative 타입 될떄까지 내려가서 비교 
+
+
+---
+
+git deploy preview - 풀리퀘하면 자동으로 url
+
+
+### styled comp
+```javascript
+import React from 'react';
+import styled from 'styled-components';
+
+/* eslint-disable */
+const S = {
+  Button: styled.button`
+    padding: 10px;
+    background-color: ${({ theme }) => theme.palette.primary.main};
+  `,
+};
+
+const Button = ({ children }) => {
+  return (
+    <S.Button>
+      {children}
+    </S.Button>
+  );
+};
+
+export default Button;
+```
