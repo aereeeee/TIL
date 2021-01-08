@@ -65,7 +65,9 @@ const words = [
 function setup() {
   createCanvas(600, 800);
   frameRate(15);
+
   vid = createVideo(["walk.mp4"], onLoad);
+  vid.hide();
 }
 
 function onLoad() {
@@ -73,7 +75,6 @@ function onLoad() {
   vid.size(600, 800);
   vid.autoplay(true);
   vid.loop();
-  vid.hide();
 }
 
 function draw() {
