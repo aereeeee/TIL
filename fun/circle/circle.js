@@ -74,7 +74,7 @@ function sumNoise(arr, isRow) {
 
   for (let i = 0; i < arr[0].length; i++) {
     const n = isRow ? arr[0][i] : arr[i][0];
-    sum += pow(noise(n[0], n[1], n[2]), diff);
+    sum += pow(noise(...n), diff);
   }
 
   return sum;
@@ -89,7 +89,7 @@ function setXY(arr) {
 
   for (let i = 0; i < noiseArr.length; i++) {
     const n = isRow ? noiseArr[0][i] : noiseArr[i][0];
-    const noiseVal = pow(noise(n[0], n[1], n[2]), diff);
+    const noiseVal = pow(noise(...n), diff);
 
     const scale = isRow ? width : height;
     arr.push((scale * (noiseVal + prevSum)) / sum);
