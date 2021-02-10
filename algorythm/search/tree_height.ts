@@ -7,6 +7,13 @@ function maxDepthDFS(root: TreeNode | null): number {
     : 0;
 }
 
+function minDepthDFS(root: TreeNode | null): number {
+  if (!root) return 0;
+  const left = minDepthDFS(root.left);
+  const right = minDepthDFS(root.right);
+  return 1 + (Math.min(left, right) || left || right);
+}
+
 //time O(N) space O(N)
 function maxDepthBFS(root: TreeNode | null): number {
   if (!root) return 0;
