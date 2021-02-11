@@ -20,10 +20,21 @@ function maxDepthBFS(root: TreeNode | null): number {
   let depth = 0;
   const queue = [{ node: root, level: 1 }];
   while (queue.length) {
-    let { node, level } = queue.shift();
+    const { node, level } = queue.shift();
     depth = Math.max(depth, level);
     node.left && queue.push({ node: node.left, level: level + 1 });
     node.right && queue.push({ node: node.right, level: level + 1 });
   }
   return depth;
+}
+
+function minDepthBFS(root: TreeNode | null): number {
+  if (!root) return 0;
+  const queue = [{ node: root, level: 1 }];
+  while (queue.length) {
+    const { node, level } = queue.shift();
+    if (!node.left && !node.right) return level;
+    node.left && queue.push({ node: node.left, level: level + 1 });
+    node.right && queue.push({ node: node.right, level: level + 1 });
+  }
 }
